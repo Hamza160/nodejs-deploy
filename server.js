@@ -5,7 +5,7 @@ const cors = require('cors')
 const logger = require('morgan');
 const DBConnect = require('./services/db.service')
 const PORT = process.env.PORT;
-const host = '0.0.0.0';
+const host = '127.0.0.0';
 /**Loading Middlewares */
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
