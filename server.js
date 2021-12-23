@@ -5,7 +5,7 @@ const cors = require('cors')
 const logger = require('morgan');
 const DBConnect = require('./services/db.service')
 const PORT = process.env.PORT;
-
+const host = '0.0.0.0';
 /**Loading Middlewares */
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -21,7 +21,7 @@ app.use('/', function(req, res) {
 const AuthRouter = require('./routes/auth.routes');
 app.use('/api/auth/', AuthRouter);
 
-app.listen(() => console.log(`Server is Started on PORT: ${PORT}`));
+app.listen((PORT, host) => console.log(`Server is Started on PORT: ${PORT} and host: ${host}`));
 
 
 
