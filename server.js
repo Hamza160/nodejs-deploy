@@ -21,7 +21,7 @@ app.use('/', function(req, res) {
 const AuthRouter = require('./routes/auth.routes');
 app.use('/api/auth/', AuthRouter);
 
-app.listen((PORT, host) => console.log(`Server is Started on PORT: ${PORT} and host: ${host}`));
+app.listen(() => console.log(`Server is Started on PORT: ${PORT} and host: ${host}`));
 
 
 
